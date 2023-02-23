@@ -6,7 +6,7 @@ services:
             - db
         environment:
             # ALLOWED_HOSTS is a comma separated list of hostnames the server will use
-            - "ALLOWED_HOSTS=hostname1,hostname2"
+            - "ALLOWED_HOSTS=NB-Emanuele"
             # If DATABASE_URL not specified, will use an sqlite3 database in /data
             # Format documented at https://github.com/kennethreitz/dj-database-url
             - "DATABASE_URL=postgres://postgres@db/postgres"
@@ -14,11 +14,11 @@ services:
             - "DEBUG=true"
             # Set initial super user's password. USERNAME, PASSWORD and EMAIL must all be specified.
             # Changes here will not change an existing superuser's password. 
-            - "SUPERUSER_USERNAME=admin"
-            - "SUPERUSER_PASSWORD=password"
-            - "SUPERUSER_EMAIL=fake@email.com"
+            - "SUPERUSER_USERNAME=sysadmin"
+            - "SUPERUSER_PASSWORD=Password01."
+            - "SUPERUSER_EMAIL=ict@sistemaazienda.com"
             # Set the timezone inside Django
-            - "TIME_ZONE=America/Toronto"
+            - "TIME_ZONE=Europe/Rome"
             # If behind a proxy like traefik, you can enable secure cookies and HSTS
             - SECURE_HSTS_SECONDS=0
             - SECURE_COOKIES=False
